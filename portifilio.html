@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width">
+</head>
+<style>
+   body{
+    background-image: url(paw.jpg);
+    background-color:linear-gradient(135deg,#eef2ff,#f8fafc);
+    text-align:center;
+    margin:0;
+    font-family:Arial;
+    
+}
+
+.pannel{
+    height:60px;
+    width:100%;
+    background-color:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top: 1vh;
+}
+
+nav a{
+    color:white;
+    margin:0 20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#3b82f6;
+}
+
+.bottom{
+    background-color:white;
+    min-height:100vh;
+    color:#0f172a;
+    padding:40px;
+    padding: 40px;
+    
+}
+
+section{
+    margin:80px 0;
+}
+.size{
+    position: absolute;
+    top:330px;
+    left: 250px;
+    text-align: left;
+}
+.about-box{
+    max-width: 700px;
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-left: 250px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: left;
+    backdrop-filter: blur(5px);
+}
+
+.about-box h3{
+    margin-top: 15px;
+    color:#3b82f6;
+}
+
+.about-box ul{
+    padding-left: 20px;
+}
+
+.about-box li{
+    margin: 5px 0;
+}
+.service-box{
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.service-box h3{
+    color:#3b82f6;
+}
+.project{
+    margin-top: 20px;
+    display: block;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    
+}
+</style>
+
+<body>
+
+    <image src ="meow.png" width="200" height="200"></image>
+    <div class="pannel">
+        <nav>
+            <a onclick="showtab('home')">HOME</a>
+            <a onclick="showtab('service')">SERVICE</a>
+            <a onclick="showtab('projects')">PROJECTS</a>
+            <a onclick="showtab('contact')">CONTACT</a>
+        </nav>
+    </div>
+    
+    <div class="bottom">
+        <section id="home">
+            <image src="port.jpeg"  width="200" height="200" align="left" style="border-radius: 50%; position: absolute; top: 275px; left: 15px; object-fit: cover;" ></image>
+            <div class="size"><h2> Soniya Kalekar <br> Python Developer | Website Developer </h2></div><br>
+            <br>
+            <div class="about-box">
+                <p>
+                    Hi! I'm a developer who enjoys building useful tools and clean websites.
+                    I work mainly with Python and create automation scripts, data analysis
+                    projects, and web applications.
+                </p>
+
+                <h3>Skills</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>c</li>
+                    <li>c++</li>
+                    <li>java</li>
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>SQLite</li>
+                    <li>Data Analysis</li>
+                </ul>
+                <h3>What I Can Build</h3>
+                <ul>
+                    <li>Websites</li>
+                    <li>Automation tools</li>
+                    <li>Custom Python programs</li>
+                    <li>Data visualization projects</li>
+                    <li>app</li>
+                </ul>
+                <p>
+                    If you are interested in working with me, feel free to check my projects
+                    or contact me.
+                </p>
+            </div>
+            
+        
+        </section>
+
+        <section id="service">
+                <h2>My Services</h2>
+                <div class="service-box">
+                    <h3>🌐 Website Development</h3>
+                    <p>I create clean, responsive, and user-friendly websites using HTML, CSS, and JavaScript.</p>
+                
+                </div>
+                
+                <div class="service-box">
+                    <h3>⚙️ Automation Tools</h3>
+                    <p>I build Python scripts to automate repetitive tasks and improve efficiency.</p>
+                </div>
+                
+                <div class="service-box">
+                    <h3>💻 Custom Applications</h3>
+                    <p>I develop custom Python-based applications tailored to your needs.</p>
+                </div>
+                
+                <div class="service-box">
+                    <h3>📊 Data Analysis</h3>
+                    <p>I analyze data and create meaningful insights and visualizations.</p>
+                </div>
+                
+                <div class="service-box">
+                    <h3>🧠 Problem Solving</h3>
+                    <p>I help solve small technical problems and provide efficient solutions.</p>
+                </div>
+
+        </section>
+        <section id="projects">
+            
+                <h2>My Projects</h2>
+                <div style="text-align:center; margin-bottom:30px;">
+                    <video width="500" controls style="border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.2);">
+                        <source src="projects.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+                    <img src="1.png" width="200" height="200" 
+                    style="border-radius:15px; object-fit:cover; box-shadow:0 5px 15px rgba(0,0,0,0.2); ">
+                    <img src="2.png" width="200" height="200"
+                    style="border-radius:15px; object-fit:cover; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+                    <img src="3.png" width="200" height="200"
+                    style="border-radius:15px; object-fit:cover; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+                </div>
+
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div style="max-width:600px; margin:auto; background:white; padding:25px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); text-align:left;">
+                <p>If you have any project or query, feel free to contact me.</p>
+                <p><b>📧 Email:</b> 
+                <a href="mailto:kalekarsoniya928@gmail.com" style="color:#3b82f6; text-decoration:none;">kalekarsoniya928@gmail.com</a></p>
+                <p><b>📱 Phone:</b> 
+                <a href="tel:+918999181349" style="color:#3b82f6; text-decoration:none;">
+                +91 8999181349</a></p>
+                <p><b>💬 WhatsApp:</b> 
+                <a href="8999181349" target="_blank" style="color:#3b82f6; text-decoration:none;">
+                Chat on WhatsApp</a></p>
+            </div>
+        
+        </section>
+    </div>
+    <script>
+    function showtab(id){
+        document.querySelectorAll("section").forEach(s=>s.style.display="none");
+        document.getElementById(id).style.display="block";
+    }
+    showtab("home");
+    </script>
+
+       
+        
+
+    
+
+</body>
+</html>
