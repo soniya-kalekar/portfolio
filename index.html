@@ -12,21 +12,33 @@ body{
     font-family:Arial;
 }
 
+/* NAVBAR FIXED */
 .pannel{
     height:60px;
     width:100%;
     background-color:#0f172a;
     display:flex;
-    justify-content:center;
     align-items:center;
-    margin-top: 1vh;
+    overflow-x:auto;
+}
+
+.pannel::-webkit-scrollbar{
+    display:none;
+}
+
+nav{
+    display:flex;
+    width:100%;
+    justify-content:space-around;
+    min-width:400px;
 }
 
 nav a{
     color:white;
-    margin:0 20px;
     text-decoration:none;
     font-weight:bold;
+    white-space:nowrap;
+    padding:0 10px;
     cursor:pointer;
 }
 
@@ -45,7 +57,7 @@ section{
     margin:80px 0;
 }
 
-/* FIXED HEADER (no absolute now) */
+/* HEADER */
 .header{
     display:flex;
     align-items:center;
@@ -62,7 +74,7 @@ section{
     object-fit:cover;
 }
 
-/* ABOUT BOX */
+/* ABOUT */
 .about-box{
     max-width: 700px;
     background: rgba(255,255,255,0.9);
@@ -101,7 +113,7 @@ section{
     color:#3b82f6;
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width:600px){
     .header{
         flex-direction:column;
@@ -120,133 +132,126 @@ section{
 
 <body>
 
-    <img src ="meow.png" width="200" height="200">
+<img src ="meow.png" width="200" height="200">
 
-    <div class="pannel">
-        <nav>
-            <a onclick="showtab('home')">HOME</a>
-            <a onclick="showtab('service')">SERVICE</a>
-            <a onclick="showtab('projects')">PROJECTS</a>
-            <a onclick="showtab('contact')">CONTACT</a>
-        </nav>
+<div class="pannel">
+    <nav>
+        <a onclick="showtab('home')">HOME</a>
+        <a onclick="showtab('service')">SERVICE</a>
+        <a onclick="showtab('projects')">PROJECTS</a>
+        <a onclick="showtab('contact')">CONTACT</a>
+    </nav>
+</div>
+
+<div class="bottom">
+
+<!-- HOME -->
+<section id="home">
+    <div class="header">
+        <img src="port.jpeg">
+        <h2>Soniya Kalekar <br> Python Developer | Website Developer</h2>
     </div>
-    
-    <div class="bottom">
 
-        <!-- HOME -->
-        <section id="home">
+    <div class="about-box">
+        <p>
+            Hi! I'm a developer who enjoys building useful tools and clean websites.
+            I work mainly with Python and create automation scripts, data analysis
+            projects, and web applications.
+        </p>
 
-            <div class="header">
-                <img src="port.jpeg">
-                <h2>Soniya Kalekar <br> Python Developer | Website Developer</h2>
-            </div>
+        <h3>Skills</h3>
+        <ul>
+            <li>Python</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>SQLite</li>
+            <li>Data Analysis</li>
+        </ul>
 
-            <div class="about-box">
-                <p>
-                    Hi! I'm a developer who enjoys building useful tools and clean websites.
-                    I work mainly with Python and create automation scripts, data analysis
-                    projects, and web applications.
-                </p>
+        <h3>What I Can Build</h3>
+        <ul>
+            <li>Websites</li>
+            <li>Automation tools</li>
+            <li>Custom Python programs</li>
+            <li>Data visualization projects</li>
+            <li>Apps</li>
+        </ul>
 
-                <h3>Skills</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>c</li>
-                    <li>c++</li>
-                    <li>java</li>
-                    <li>HTML & CSS</li>
-                    <li>JavaScript</li>
-                    <li>SQLite</li>
-                    <li>Data Analysis</li>
-                </ul>
-
-                <h3>What I Can Build</h3>
-                <ul>
-                    <li>Websites</li>
-                    <li>Automation tools</li>
-                    <li>Custom Python programs</li>
-                    <li>Data visualization projects</li>
-                    <li>app</li>
-                </ul>
-
-                <p>
-                    If you are interested in working with me, feel free to check my projects
-                    or contact me.
-                </p>
-            </div>
-        </section>
-
-        <!-- SERVICES -->
-        <section id="service">
-            <h2>My Services</h2>
-
-            <div class="service-box">
-                <h3>🌐 Website Development</h3>
-                <p>I create clean, responsive, and user-friendly websites using HTML, CSS, and JavaScript.</p>
-            </div>
-
-            <div class="service-box">
-                <h3>⚙️ Automation Tools</h3>
-                <p>I build Python scripts to automate repetitive tasks and improve efficiency.</p>
-            </div>
-
-            <div class="service-box">
-                <h3>💻 Custom Applications</h3>
-                <p>I develop custom Python-based applications tailored to your needs.</p>
-            </div>
-
-            <div class="service-box">
-                <h3>📊 Data Analysis</h3>
-                <p>I analyze data and create meaningful insights and visualizations.</p>
-            </div>
-
-            <div class="service-box">
-                <h3>🧠 Problem Solving</h3>
-                <p>I help solve small technical problems and provide efficient solutions.</p>
-            </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section id="projects">
-            <h2>My Projects</h2>
-
-            <div style="text-align:center; margin-bottom:30px;">
-                <video style="width:100%; max-width:500px;" controls>
-                    <source src="projects.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
-                <img src="1.png" width="200" height="200" style="border-radius:15px; object-fit:cover;">
-                <img src="2.png" width="200" height="200" style="border-radius:15px; object-fit:cover;">
-                <img src="3.png" width="200" height="200" style="border-radius:15px; object-fit:cover;">
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact">
-            <h2>Contact Me</h2>
-
-            <div style="max-width:600px; margin:auto; background:white; padding:25px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); text-align:left;">
-                
-                <p>If you have any project or query, feel free to contact me.</p>
-
-                <p><b>📧 Email:</b> 
-                <a href="mailto:kalekarsoniya928@gmail.com" style="color:#3b82f6; text-decoration:none;">
-                kalekarsoniya928@gmail.com</a></p>
-
-                <p><b>📱 Phone:</b> 
-                <a href="tel:+918999181349" style="color:#3b82f6; text-decoration:none;">
-                +91 8999181349</a></p>
-
-                <p><b>💬 WhatsApp:</b> 
-                <a href="https://wa.me/918999181349" target="_blank" style="color:#3b82f6; text-decoration:none;">
-                Chat on WhatsApp</a></p>
-
-            </div>
-        </section>
-
+        <p>
+            If you are interested in working with me, feel free to check my projects
+            or contact me.
+        </p>
     </div>
+</section>
+
+<!-- SERVICES -->
+<section id="service">
+    <h2>My Services</h2>
+
+    <div class="service-box">
+        <h3>🌐 Website Development</h3>
+        <p>I create clean, responsive, and user-friendly websites.</p>
+    </div>
+
+    <div class="service-box">
+        <h3>⚙️ Automation Tools</h3>
+        <p>I build Python scripts to automate tasks.</p>
+    </div>
+
+    <div class="service-box">
+        <h3>💻 Custom Applications</h3>
+        <p>I develop custom software based on your needs.</p>
+    </div>
+
+    <div class="service-box">
+        <h3>📊 Data Analysis</h3>
+        <p>I analyze data and create insights.</p>
+    </div>
+
+    <div class="service-box">
+        <h3>🧠 Problem Solving</h3>
+        <p>I help solve technical problems efficiently.</p>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <video style="width:100%; max-width:500px;" controls>
+        <source src="projects.mp4" type="video/mp4">
+    </video>
+
+    <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
+        <img src="1.png" width="200" height="200" style="border-radius:15px;">
+        <img src="2.png" width="200" height="200" style="border-radius:15px;">
+        <img src="3.png" width="200" height="200" style="border-radius:15px;">
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <div style="max-width:600px; margin:auto; background:white; padding:25px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); text-align:left;">
+        
+        <p>If you have any project or query, feel free to contact me.</p>
+
+        <p><b>Email:</b> 
+        <a href="mailto:kalekarsoniya928@gmail.com">kalekarsoniya928@gmail.com</a></p>
+
+        <p><b>Phone:</b> 
+        <a href="tel:+918999181349">+91 8999181349</a></p>
+
+        <p><b>WhatsApp:</b> 
+        <a href="https://wa.me/918999181349" target="_blank">Chat on WhatsApp</a></p>
+    </div>
+</section>
+
+</div>
 
 <script>
 function showtab(id){
