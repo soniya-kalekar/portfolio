@@ -140,6 +140,7 @@ section{
         <a onclick="showtab('service')">SERVICE</a>
         <a onclick="showtab('projects')">PROJECTS</a>
         <a onclick="showtab('contact')">CONTACT</a>
+        <a href="/review">REVIEWS</a>
     </nav>
 </div>
 
@@ -250,6 +251,24 @@ section{
         <a href="https://wa.me/918999181349" target="_blank">Chat on WhatsApp</a></p>
     </div>
 </section>
+
+    <h2>Client Reviews</h2>
+
+{% for r in reviews %}
+<div class="service-box">
+
+<p>{{ r.review }}</p>
+
+<p>
+{% for i in range(r.rating) %}
+⭐
+{% endfor %}
+</p>
+
+<b>- {{ r.name }}</b>
+
+</div>
+{% endfor %}
 
 </div>
 
