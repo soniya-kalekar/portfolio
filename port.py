@@ -15,10 +15,10 @@ def init_db():
     conn=get_db_connection()
     c  =conn.cursor()
     c.execute("""
-        CREATE A TABLE IF NOT EXISTS reviews(
+        CREATE TABLE IF NOT EXISTS reviews(
               id INTEGER PRIMARY KEY AUTOINCREMENT,
               name TEXT NOT NULL,
-              review TEXT NIT NULL,
+              review TEXT NOT NULL,
               rating INTEGER NOT NULL,
               date TEXT DEFAULT CURRENT_TIMESTAMP
 
