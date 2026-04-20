@@ -1,8 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Write Review</title>
+</head>
+
+<body style="font-family:Arial; text-align:center; background:#f8fafc;">
+
 <h2>Leave a Review</h2>
 
 <form method="POST">
 
 <input type="text" name="name" placeholder="Your Name" required>
+<br><br>
 
 <select name="rating">
 <option value="5">⭐⭐⭐⭐⭐</option>
@@ -12,8 +22,21 @@
 <option value="1">⭐</option>
 </select>
 
-<textarea name="review" placeholder="Write your review"></textarea>
+<br><br>
+
+<textarea name="review" placeholder="Write your review" required style="width:300px; height:100px;"></textarea>
+
+<br><br>
 
 <button type="submit">Submit Review</button>
 
 </form>
+
+<br>
+
+<a href="/reviews">
+<button>Back to Reviews</button>
+</a>
+
+</body>
+</html>
