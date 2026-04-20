@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-rv_path = os.path.join(os.path.dirname(__file__), 'review.db')
+rv_path = os.path.join(os.path.dirname(__file__), "review.db")
 
 
 def get_db_connection():
@@ -15,9 +15,8 @@ def get_db_connection():
 
 def init_db():
     conn = get_db_connection()
-    c = conn.cursor()
 
-    c.execute("""
+    conn.execute("""
         CREATE TABLE IF NOT EXISTS reviews(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
