@@ -255,6 +255,7 @@ section{
     <h2>Client Reviews</h2>
 
 {% for r in reviews %}
+
 <div class="service-box">
 
 <p>{{ r.review }}</p>
@@ -268,10 +269,12 @@ section{
 <b>- {{ r.name }}</b>
 
 </div>
+
 {% endfor %}
 
-</div>
-
+<a href="/reviews">
+<button style="padding:10px 20px; margin-top:20px;">See All Reviews</button>
+</a>
 <script>
 function showtab(id){
     document.querySelectorAll("section").forEach(s=>s.style.display="none");
