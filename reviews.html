@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>All Reviews</title>
+</head>
+
+<body style="font-family:Arial; text-align:center; background:#f8fafc;">
+
+<h1>Client Reviews</h1>
+
+<a href="/review">
+<button style="padding:10px 20px; margin-bottom:30px;">
+Write a Review
+</button>
+</a>
+
+{% for r in reviews %}
+
+<div style="background:white; padding:20px; margin:20px auto; max-width:600px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1);">
+
+<p>{{ r.review }}</p>
+
+<p>
+{% for i in range(r.rating) %}
+⭐
+{% endfor %}
+</p>
+
+<b>- {{ r.name }}</b>
+
+</div>
+
+{% endfor %}
+
+<a href="/">
+<button style="padding:10px 20px; margin-top:30px;">
+Back to Home
+</button>
+</a>
+
+</body>
+
+</html>
